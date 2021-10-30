@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import './orgSignUp.scss'
 import step1img from '../../images/nftHero.png'
+import {toast} from 'react-toastify'
+
 function OrgSignUp() {
 
     const [currentStep, setCurrentStep] = useState(0);
-
+    const [orgForm,setOrgForm] = useState({});
     const steps =
         [
             <Step1 setCurrentStep={setCurrentStep} />,
@@ -56,7 +58,12 @@ function Step1({ setCurrentStep }) {
             <span className="navBtns">
                 <button
                     className={"btn"}
-                    onClick={() => { setCurrentStep(currentStep => currentStep + 1) }}>Continue</button>
+                    onClick={() => {
+                        if(true){setCurrentStep(currentStep => currentStep + 1)}
+                        else{
+
+                        }
+                        }}>Continue</button>
             </span>
         </div>
     )

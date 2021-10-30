@@ -5,6 +5,7 @@ import {
 } from "react-router-dom"
 
 import OrgSignUp from "./routes/OrgSignUp";
+import { ToastContainer } from 'react-toastify';
 
 function Router() {
   return (
@@ -17,6 +18,17 @@ function Router() {
           <OrgSignUp />
         </Route>
       </Switch>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </BrowserRouter>
   );
 }
