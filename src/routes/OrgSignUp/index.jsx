@@ -9,7 +9,8 @@ function OrgSignUp() {
         [
             <Step1 setCurrentStep={setCurrentStep} />,
             <Step2 setCurrentStep={setCurrentStep} />,
-            <Step3 setCurrentStep={setCurrentStep} />
+            <Step3 setCurrentStep={setCurrentStep} />,
+            <Step4 setCurrentStep={setCurrentStep} />,
         ]
 
     return (
@@ -24,7 +25,7 @@ function OrgSignUp() {
                         <img src={step1img} alt="" />
                     </div>
                     <div className="progressBar">
-                        <div className="progressInner">
+                        <div style={{ width: `${((currentStep + 1) / 4) * 100}%` }} className="progressInner">
 
                         </div>
                     </div>
@@ -46,6 +47,10 @@ function Step1({ setCurrentStep }) {
             </span>
             <span className={"inputCon"}>
                 <p className={"label"}>Organization website</p>
+                <input className={"input"} type="text" />
+            </span>
+            <span className={"inputCon"}>
+                <p className={"label"}>Sociel medial links</p>
                 <input className={"input"} type="text" />
             </span>
             <span className="navBtns">
@@ -82,16 +87,32 @@ function Step3({ setCurrentStep }) {
     return (
         <div className="steps">
             <span className={"inputCon"}>
-                <p className={"label"}>Tagline</p>
+                <p className={"label"}>Phone number</p>
                 <input className={"input"} type="text" />
             </span>
             <span className={"inputCon"}>
-                <p className={"label"}>Describe your Cause in detail</p>
-                <textarea className={"inputTextarea"} type="text" rows="10" />
+                <p className={"label"}>Email address</p>
+                <input className={"input"} type="text" />
+            </span>
+            <span className={"inputCon"}>
+                <p className={"label"}>Address</p>
+                <input className={"input"} type="text" />
             </span>
             <span className="navBtns">
                 <button className={"btn"}>Continue</button>
             </span>
+        </div>
+    )
+}
+
+
+function Step4({ setCurrentStep }) {
+    return (
+        <div className="steps">
+            <label htmlFor="" className={"inputCon"}>
+                <p>Upload images</p>
+                <input type="file" />
+            </label>
         </div>
     )
 }
