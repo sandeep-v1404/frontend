@@ -1,6 +1,17 @@
+@import "../../variables.scss";
+
 body {
     padding: 0;
     margin: 0;
+}
+
+h1,
+h3 {
+    font-family: $font-primary;
+}
+
+p {
+    font-family: $font-secondary;
 }
 
 .signUpPage {
@@ -16,19 +27,148 @@ body {
     display: flex;
     height: 40rem;
     width: 70rem;
-    box-shadow: 0 0 15px gainsboro;
+    box-shadow: 0 0 25px rgb(105, 105, 105);
     border-radius: 30px;
     overflow: hidden;
+    background-color: #6e72fc;
+    background-image: linear-gradient(315deg, #6e72fc 0%, #bc21ff 74%);
 }
 
 .signUpProgress {
     width: 50%;
     height: 100%;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+    padding: 1rem 2rem;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    .progTitle {
+        color: white;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+
+    .progSub {
+        color: white;
+        font-size: 1rem;
+        line-height: 150%;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .imgSec {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1.5rem;
+        img {
+            height: 16rem;
+        }
+    }
+
+    .progressBar {
+        position: absolute;
+        display: flex;
+        width: 85%;
+        height: 1rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.322);
+        border-radius: 50px;
+        bottom: 3rem;
+        left: auto;
+        right: auto;
+        .progressInner {
+            height: 100%;
+            width: 50%;
+            background-color: white;
+            border-radius: 50px;
+        }
+    }
 }
 
 .signUpSteps {
     width: 50%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 15px;
+    margin: 1.5rem;
+
+    p {
+        font-family: $font-primary;
+    }
+}
+
+.steps {
+    display: flex;
+    width: 100%;
     height: 100%;
+    padding: 4rem;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+
+    .inputCon {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        margin: 1rem 0;
+
+        .label {
+            font-size: 1rem;
+            margin-right: auto;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: rgb(82, 82, 82);
+        }
+
+        .input {
+            border: none;
+            height: 2.25rem;
+            width: 100%;
+            border-radius: 15px;
+            box-sizing: border-box;
+            padding: 0 1rem;
+            box-shadow: 0 0 5px gainsboro;
+            font-family: $font-secondary;
+
+            &:focus{
+               outline: 2px solid #6e72fc;;
+            }
+        }
+
+        textarea{
+            @extend .input;
+            height: auto;
+            padding: 1rem;
+        }
+    }
+
+    .navBtns {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: auto;
+
+        .btn {
+            border: none;
+            height: 2.5rem;
+            color: white;
+            font-size: 1.25rem;
+            border-radius: 15px;
+            background-color: #6e72fc;
+            border: 2px solid #6e72fc;
+            transition: all 0.5s ease-in-out;
+            //background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+            &:hover{
+                background-color: transparent;
+                border: 2px solid #6e72fc;
+                color: #6e72fc;
+            }
+
+            
+        }
+    }
 }
