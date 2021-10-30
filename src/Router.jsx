@@ -3,6 +3,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom"
+import Home from "./routes/Home";
 
 import OrgSignUp from "./routes/OrgSignUp";
 
@@ -11,7 +12,7 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path={"/"}>
-          <h1>replace with HOMEPAGE component</h1>
+          <Home/>
         </Route>
         <Route exact path={"/org/signup"}>
           <OrgSignUp />
