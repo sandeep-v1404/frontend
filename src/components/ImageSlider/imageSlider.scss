@@ -1,0 +1,151 @@
+// .image__slider {
+//   position: relative;
+//   width: 754px;
+//   height: 292px;
+//   border-radius: 50px;
+//   margin: 115px auto 0;
+//   background: #000;
+//   .prev,
+//   .next {
+//     position: absolute;
+//     top: 50%;
+//     width: 40px;
+//     height: 40px;
+//     margin-top: -20px;
+//     border-radius: 50px;
+//     line-height: 40px;
+//     text-align: center;
+//     cursor: pointer;
+//     color: black;
+//     background-color: white;
+//     transition: all 0.3s;
+//     font-size: 20px;
+//     font-weight: bold;
+//   }
+//   .prev:hover,
+//   .next:hover {
+//     opacity: 1;
+//     background: red;
+//   }
+//   .prev {
+//     left: 59px;
+//   }
+//   .next {
+//     right: -59px;
+//   }
+//   .prev::before {
+//     content: "<";
+//   }
+//   .next::before {
+//     content: ">";
+//   }
+//   ul {
+//     list-style: none;
+//     position: relative;
+//     width: 754px;
+//     height: 292px;
+//     margin: 0;
+//     padding: 0;
+//     li {
+//       overflow: hidden;
+//       position: absolute;
+//       z-index: 0;
+//       left: 377px;
+//       top: 147px;
+//       width: 0;
+//       height: 0;
+//       padding: 0;
+//       border: 3px solid white;
+//       cursor: pointer;
+//       background: white;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         background-position: center;
+//       }
+//     }
+//   }
+// }
+@import "../../variables.scss";
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  @media (max-width: 768px) {
+    width: 250px;
+    height: auto;
+  }
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-color: #000;
+  display: block;
+  .swiper-container {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    bottom: -16vw;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding-bottom: 3vw;
+    @media (max-width: 768px) {
+      bottom: -58vw;
+      padding-bottom: 8vw;
+    }
+  }
+}
+
+.title_wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 3vw 0 2vw 0;
+  @media (max-width: 768px) {
+    padding-top: 13vw;
+  }
+  .reactLogo {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 1vw;
+    @media (max-width: 768px) {
+      width: 25vw;
+      height: 25vw;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .title_ {
+    color: #fff;
+    font-family: $font-primary;
+    text-align: left;
+    font-size: 2vw;
+    @media (max-width: 768px) {
+      font-size: 7vw;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+}
