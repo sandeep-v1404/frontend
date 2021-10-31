@@ -1,0 +1,142 @@
+@import "../../variables.scss";
+
+.dashboardPage {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardCon {
+    display: flex;
+    height: 40rem;
+    width: 70rem;
+    box-shadow: 0 0 25px rgb(105, 105, 105);
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #1348d3;
+    background-image: linear-gradient(315deg, #181e82 0%, #1348d3 74%);
+    animation: appearGrow 1s ease-in-out forwards;
+}
+
+.imgPre,
+.mintForm {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.mintForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.imgPre {
+    justify-content: center;
+    align-items: center;
+    label {
+        input {
+            margin-top: 2rem;
+        }
+
+        p {
+            border: none;
+            margin: 1.5rem 0;
+            padding: 0.5rem;
+            color: gray;
+            font-size: 1rem;
+            border-radius: 50px;
+            background-color: white;
+            border: 2px solid white;
+            transition: all 0.5s ease-in-out;
+            //background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+            &:hover {
+                background-color: transparent;
+                border: 2px solid white;
+                color: white;
+            }
+        }
+    }
+
+    img {
+        background-color: whitesmoke;
+        border: 5px solid rgba(0, 0, 0, 0.226);
+        height: 50%;
+        width: 85%;
+        border-radius: 15px;
+        object-fit: contain;
+    }
+}
+
+.inputCon {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin: 1rem 0;
+
+    .label {
+        font-size: 1rem;
+        margin-right: auto;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgb(82, 82, 82);
+    }
+
+    .input {
+        border: none;
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 15px;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        box-shadow: 0 0 5px gainsboro;
+        font-family: $font-secondary;
+
+        &:focus {
+            outline: 2px solid #6e72fc;
+        }
+    }
+
+    .textarea {
+        @extend .input;
+        height: auto;
+        padding: 1rem;
+    }
+}
+
+.navBtns {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 1rem;
+
+    .btn {
+        border: none;
+        height: 2.5rem;
+        color: white;
+        font-size: 1.25rem;
+        border-radius: 15px;
+        background-color: #1348d3;
+        border: 2px solid #1348d3;
+        transition: all 0.5s ease-in-out;
+        //background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+        &:hover {
+            background-color: transparent;
+            border: 2px solid #1348d3;
+            color: #1348d3;
+        }
+    }
+}
+
+.inputConExt {
+    @extend .inputCon;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}

@@ -4,8 +4,14 @@ import {
   Route,
 } from "react-router-dom"
 
-import OrgSignUp from "./routes/OrgSignUp";
+
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import OrgSignUp from "./routes/OrgSignUp";
+import Dashboard from "./routes/Dashboard";
+import Marketplace from "./routes/Marketplace";
+
 
 function Router() {
   return (
@@ -14,8 +20,14 @@ function Router() {
         <Route exact path={"/"}>
           <h1>replace with HOMEPAGE component</h1>
         </Route>
+        <Route exact path={"/marketplace"}>
+          <Marketplace />
+        </Route>
         <Route exact path={"/org/signup"}>
           <OrgSignUp />
+        </Route>
+        <Route exact path={"/org/dashboard"}>
+          <Dashboard />
         </Route>
       </Switch>
       <ToastContainer
