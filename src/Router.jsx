@@ -5,7 +5,14 @@ import {
 } from "react-router-dom"
 import Home from "./routes/Home";
 
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import OrgSignUp from "./routes/OrgSignUp";
+import Dashboard from "./routes/Dashboard";
+import Marketplace from "./routes/Marketplace";
+
 
 function Router() {
   return (
@@ -14,10 +21,27 @@ function Router() {
         <Route exact path={"/"}>
           <Home/>
         </Route>
+        <Route exact path={"/marketplace"}>
+          <Marketplace />
+        </Route>
         <Route exact path={"/org/signup"}>
           <OrgSignUp />
         </Route>
+        <Route exact path={"/org/dashboard"}>
+          <Dashboard />
+        </Route>
       </Switch>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </BrowserRouter>
   );
 }
